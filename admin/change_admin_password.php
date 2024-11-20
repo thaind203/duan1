@@ -1,3 +1,72 @@
+<?php
+include('../db/connect.php');
+?>
+<?php
+session_start();
+include('./common/checkLogin.php')
+?>
+
+<?php
+
+if (isset($_SESSION['login_admin_id']) == false) {
+    echo "<script> alert('Bạn vẫn chưa đăng nhập, Vui lòng đăng nhập'); window.location.href = 'index.php'; </script>";
+    exit();
+}
+
+if (isset($_SESSION['login_email'])){
+    $tendangnhap = $_SESSION['login_email'];
+}
+
+$errors = '';
+$thongBao = '';
+
+if (isset($_POST['doimatkhau'])) {
+    $matkhaucu = $_POST['matkhaucu'];
+    $matkhaumoi_1 = $_POST['matkhaumoi_1'];
+    $matkhaumoi_2 = $_POST['matkhaumoi_2'];
+
+    $sql = "SELECT * FROM quanli_user WHERE user_email = ? AND user_password = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("ss", $tendangnhap, $matkhaucu); // 2 giá trị tương đương 2 dấu ? ở trên select
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row_count = $result->num_rows;
+
+
+    if ($row_count == 0) {
+        $errors .= "Mật khẩu cũ sai <br>";
+    }
+
+    if($matkhaucu == $matkhaumoi_1){
+        $errors .= "Mật khẩu mới không được giống mật khẩu cũ <br>";
+    }
+
+    if (strlen($matkhaumoi_1) < 6) {
+        $errors .= "Mật khẩu mới phải trên 6 ký tự <br>";
+    }
+
+    if ($matkhaumoi_1 != $matkhaumoi_2) {
+        $errors .= "Nhập lại mật khẩu không giống nhau <br>";
+    }
+
+    if($errors == '') {
+        $sql_update_password = "UPDATE quanli_user SET user_password = ? WHERE user_email = ?";
+        $stmt_update = $mysqli->prepare($sql_update_password);
+        $stmt_update -> bind_param("ss",$matkhaumoi_1 , $tendangnhap);
+        $stmt_update ->execute();
+
+        $thongBao = "Thay đổi mật khẩu thành công";
+
+        //Sau khi đổi mật khẩu đăng xuất
+        // unset($_SESSION['admin']);
+       
+        // unset($_SESSION['login_email']);
+        // unset($_SESSION['login_name']);
+        // unset($_SESSION['login_admin_id']);
+    }
+}
+?>
 
 
 <!DOCTYPE html>

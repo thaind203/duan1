@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	// Kết nối database
-	$mysqli = new mysqli("localhost","root","","asm_php1");
+	$mysqli = new mysqli("localhost","root","","duan1");
 
 	// Check connection
 	if ($mysqli -> connect_errno) {
@@ -15,11 +15,11 @@
 <html lang="zxx">
 
 <head>
-	<title>Dự Án 1</title>
+	<title>SHOP</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
-	<meta name="keywords" content="Dự Án 1"
+	<meta name="keywords" content="SHOP"
 	/>
 	<script>
 		addEventListener("load", function () {
@@ -121,6 +121,8 @@
 		}		
 		include('./frontend/footer.php');
 	?>
+
+	
 
 	
 	
