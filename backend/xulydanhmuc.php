@@ -2,6 +2,7 @@
 include('../db/connect.php');
 ?>
 <?php
+
 // Thêm
 if (isset($_POST['themdanhmuc'])) {
     $tendanhmuc = $_POST['tendanhmuc'];
