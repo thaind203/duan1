@@ -223,7 +223,7 @@ if (isset($_GET['xoa'])) {
                                     <h4 class="py-1 mr-auto">Danh sách sản phẩm</h4>
                                     <a href="#1" class="btn btn-secondary ml-2">
                                             <i class="fas fa-trash"></i>
-                                            Thùng rác(0)
+                                            Thùng rác
                                     </a>
 
                                 </div>
