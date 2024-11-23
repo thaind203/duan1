@@ -43,7 +43,7 @@ if (isset($_POST['login_home'])) {
 		}
 	}
 }
-// Đang ký
+// Đăng ký
 elseif (isset($_POST['register'])) {
 	$name = $_POST['register_name'];
 	$email = $_POST['register_email'];
