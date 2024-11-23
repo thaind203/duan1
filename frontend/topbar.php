@@ -1,4 +1,87 @@
+<?php
 
+//Đăng nhập
+if (isset($_POST['login_home'])) {
+	$taikhoan = $_POST['email_login'];
+	$matkhau = $_POST['password_login'];
+
+	//Lấy dữ liệu từ bảng quan li user
+	$select_admin = mysqli_query($mysqli, "SELECT * FROM quanli_user WHERE role='1' ");
+	$row_admin = mysqli_fetch_array($select_admin);
+	$row_email = $row_admin['user_email'];
+	$row_password = $row_admin['user_password'];
+
+	//Lấy dữ liệu từ bảng customer
+
+	if ($taikhoan == '' || $matkhau  == '') {
+		echo "<script> alert('Vui lòng nhập đầy đủ tài khoản và password')  </script>";
+	} else {
+		if (($taikhoan == $row_email) && ($matkhau == $row_password)) {
+			$_SESSION['admin_home'] = $row_admin['role'];
+			$_SESSION['login_email'] = $row_admin['user_email'];
+			$_SESSION['login_name'] = $row_admin['user_name'];
+			$_SESSION['login_id'] = $row_admin['user_id'];
+			echo "<script> alert('Xin chào Admin bạn đã đăng nhập thành công.'); </script>";
+			// window.location.href = './backend/donhang.php';
+			
+		} else {
+			$sql_select_user = mysqli_query($mysqli, "SELECT * FROM quanli_user 
+				WHERE user_email= '$taikhoan' AND user_password ='$matkhau' LIMIT 1");
+			$count = mysqli_num_rows($sql_select_user);
+			$row_dangnhap = mysqli_fetch_array($sql_select_user);
+			if ($count > 0) {
+				$_SESSION['login_home'] = $row_dangnhap['user_email'];
+				$_SESSION['login_name'] = $row_dangnhap['user_name'];
+				$_SESSION['login_id'] = $row_dangnhap['user_id'];
+				$_SESSION['user_code'] = $row_dangnhap['user_code'];
+
+				$login_name = $_SESSION['login_name'];
+				echo "<script> alert('Xin chào $login_name bạn đã đăng nhập thành công.'); window.location.href = 'index.php'; </script>";
+			} else {
+				echo "<script> alert('Tài khoản hoặc mật khẩu sai') </script>";
+			}
+		}
+	}
+}
+// Đang ký
+elseif (isset($_POST['register'])) {
+	$name = $_POST['register_name'];
+	$email = $_POST['register_email'];
+	$phone = $_POST['register_phone'];
+	$address = $_POST['register_address'];
+	$password = $_POST['register_password'];
+	$user_code = 0;
+
+	if (empty($name) || empty($email) || empty($phone) || empty($address) || empty($password)) {
+		echo "<script> alert('Vui lòng nhập đầy đủ thông tin đăng ký') </script>";
+	} else {
+		// Nếu dữ liệu hợp lệ, thực hiện câu truy vấn để thêm vào cơ sở dữ liệu
+		$sql_user_insert = mysqli_query($mysqli, "INSERT INTO quanli_user(user_name, user_code, user_email, user_phone, user_address, user_password) 
+			values ('$name', $user_code, '$email', '$phone', '$address', '$password')");
+
+
+		if ($sql_user_insert) {
+			echo "<script> alert('Đăng ký thành công \n Mời bạn đăng nhập'); window.location.href = 'index.php'; </script>";
+		} else {
+			echo "<script> alert('Đăng ký thất bại.') </script>";
+		}
+	}
+}
+
+// Đăng xuất
+if (isset($_GET['logout']) && $_GET['logout'] === '1') {
+    // Xóa session
+	unset($_SESSION['login_home']);
+	unset($_SESSION['login_name']);
+	unset($_SESSION['login_id']);
+	unset($_SESSION['user_code']);
+	unset($_SESSION['admin_home']);
+	echo "<script> alert('Đăng xuất thành công.'); window.location.href = 'index.php'; </script>";
+
+    // Dừng thực thi mã PHP sau khi chuyển hướng
+    exit;
+}
+?>
 
 <!--header -->
 <div class="agile-main-top">
