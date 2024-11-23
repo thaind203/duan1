@@ -6,7 +6,6 @@ include('../db/connect.php');
     include('./common/checkLogin.php')
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
