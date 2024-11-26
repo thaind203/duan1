@@ -56,7 +56,7 @@ include('./common/head.php')
                         <h4 class="py-1 mr-auto">Tài khoản Admin</h4>
                         <a href="#1" class="btn btn-secondary ml-2">
                             <i class="fas fa-trash"></i>
-                            Thùng rác
+                            Thùng rác 
                         </a>
 
                     </div>
