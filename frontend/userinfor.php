@@ -106,7 +106,7 @@
 								if(!isset($_SESSION['admin_home'])) {
 							?>
 							<div class="col-sm-3">
-								<a href="index.php?quanli=doimatkhau" class="text-primary mb-0">Thay đổi</a>
+								<a href="index.php?quanli=doimatkhau" class="text-primary mb-0">Đổi mật khẩu</a>
 							</div>
 							<?php
 								}
