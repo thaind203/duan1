@@ -53,23 +53,25 @@
             <span>Đơn hàng</span></a>
     </li>
     
+    <li class="nav-item active">
+        <a class="nav-link" href="customer.php">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Khách hàng</span></a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="xulydanhmuc.php">
+            <i class="fas fa-fw fa-folder-open"></i>
+            <span>Danh mục</span></a>
+    </li>
+    
     <!-- Nav Item - Tables Order-->
     <li class="nav-item active">
         <a class="nav-link" href="xulysanpham.php">
             <i class="fas fa-fw fa-tags"></i>
             <span>Sản phẩm</span></a>
     </li>
-    <li class="nav-item active">
-        <a class="nav-link" href="customer.php">
-            <i class="fas fa-fw fa-users"></i>
-            <span>Khách hàng</span></a>
-    </li>
-    
-    <li class="nav-item active">
-        <a class="nav-link" href="xulydanhmuc.php">
-            <i class="fas fa-fw fa-folder-open"></i>
-            <span>Danh mục</span></a>
-    </li>
+
     <li class="nav-item active">
         <a class="nav-link" href="message.php">
             <i class="fas fa-envelope fa-fw"></i>
