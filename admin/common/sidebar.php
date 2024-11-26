@@ -88,7 +88,7 @@
                 <h6 class="collapse-header">Tùy chọn khác</h6>
                 <a class="collapse-item" href="taikhoan_admin.php">Admin</a>
             
-                <a class="collapse-item" href="taikhoan_khachhang.php">Khách hàng</a>
+                <a class="collapse-item" href="taikhoan_khachhang.php">User</a>
             </div>
         </div>
     </li>
