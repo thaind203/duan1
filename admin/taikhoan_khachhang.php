@@ -38,15 +38,26 @@ include('./common/head.php')
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">
-                                <a href="index.php">Dashboard</a><span class="text-dark"> / Tài khoản / Khách hàng</span>
+                                <a href="index.php">Dashboard</a><span class="text-dark"> / Tài khoản / User</span>
                             </h6>
                         </div>
 
                     </div>
 
                     <div class="d-flex justify-content-center align-items-center mb-2">
-                        
-                        <h4 class="text-center">Tài khoản khách hàng</h4>
+                        <div class="d-flex mr-auto">
+                            <a href="create_user_staff.php" class="btn btn-success">
+                                <i class="fas fa-plus"></i>
+                                Thêm tài khoản
+                            </a>
+
+                        </div>
+
+                        <h4 class="py-1 mr-auto">Tài khoản User</h4>
+                        <a href="#1" class="btn btn-secondary ml-2">
+                            <i class="fas fa-trash"></i>
+                            Thùng rác
+                        </a>
 
                     </div>
 
@@ -79,6 +90,7 @@ include('./common/head.php')
                                     <th>Vai trò</th>
                                     <th>Địa chỉ</th>
                                     <th>Số điện thoại</th>
+                                    <th>Thao tác</th>
                                     <!-- <th>Quản lí</th> -->
 
                                 </tr>
@@ -111,11 +123,11 @@ include('./common/head.php')
                                         <td>
                                             <?php echo $row_acount['user_phone'] ?></td>
                                         </td>
-                                        <!-- <td>
+                                        <td>
 
                                             <a href="#1" class="btn btn-warning">Sửa</a>
                                             <a href="#1" class="btn btn-danger">Xóa</a>
-                                        </td> -->
+                                        </td>
                                     </tr>
                                     <!-- Modal edit don hang-->
                                     <div class="modal fade" id="confirmOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
