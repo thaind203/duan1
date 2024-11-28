@@ -82,7 +82,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                                Doanh thu</div>
+                                                Doanh Thu</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($total_doanhthu). ",đ" ?></div>
                                         </div>
                                         <div class="col-auto">
