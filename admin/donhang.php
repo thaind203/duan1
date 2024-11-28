@@ -33,9 +33,7 @@ if (isset($_GET['huy_dahuy_madonhang'])) {
         WHERE mahang = '$maDonHang' ");
 }
 
-
 ?>
-
 
 
 <?php
