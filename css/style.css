@@ -347,8 +347,7 @@ ul.multi-column-dropdown li a:hover {
 
 /* Slider */
 .carousel-item.item1 {
-  background: url(../images/banner/cccadcdf-c2b7-403a-9fbe-34c62edc24ea.jpg)
-    no-repeat center;
+  background: url(../images/banner/banner1.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -357,8 +356,7 @@ ul.multi-column-dropdown li a:hover {
 }
 
 .carousel-item.item2 {
-  background: url(../images/banner/black-friday-sale-laptops-gadgets-banner-template-3d-render_444361-44.avif)
-    no-repeat center;
+  background: url(../images/banner/banner2.jpeg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -367,7 +365,7 @@ ul.multi-column-dropdown li a:hover {
 }
 
 .carousel-item.item3 {
-  background: url(../images/main_banner3.png) no-repeat center;
+  background: url(../images/banner/banner3.jpeg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -376,7 +374,7 @@ ul.multi-column-dropdown li a:hover {
 }
 
 .carousel-item.item4 {
-  background: url(../images/main_banner4.png) no-repeat center;
+  background: url(../images/banner/banner4.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
