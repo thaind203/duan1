@@ -8,7 +8,7 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item item4 active">
+        <div class="carousel-item item1 active">
             <div class="container">
                 <div class="w3l-space-banner">
                     <div class="carousel-caption p-lg-5 p-sm-4 p-3">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="carousel-item item4">
+        <div class="carousel-item item1">
             <div class="container">
                 <div class="w3l-space-banner">
                     <div class="carousel-caption p-lg-5 p-sm-4 p-3">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="carousel-item item4">
+        <div class="carousel-item item1">
             <div class="container">
                 <div class="w3l-space-banner">
                     <div class="carousel-caption p-lg-5 p-sm-4 p-3">
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="carousel-item item4">
+        <div class="carousel-item item2">
             <div class="container">
                 <div class="w3l-space-banner">
                     <div class="carousel-caption p-lg-5 p-sm-4 p-3">
