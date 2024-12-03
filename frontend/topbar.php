@@ -61,7 +61,7 @@ elseif (isset($_POST['register'])) {
 
 
 		if ($sql_user_insert) {
-			echo "<script> alert('Đăng ký thành công \n Mời bạn đăng nhập'); window.location.href = 'index.php'; </script>";
+			echo "<script> alert('Đăng ký thành công'); window.location.href = 'index.php'; </script>";
 		} else {
 			echo "<script> alert('Đăng ký thất bại.') </script>";
 		}
