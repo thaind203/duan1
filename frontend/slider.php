@@ -26,16 +26,7 @@
         </div>
         <div class="carousel-item item2">
             <div class="container">
-                <div class="w3l-space-banner">
-                    <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p>
-                            <span>Siêu sale</span>
-                        </p>
-                        <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4"> Iphone 16
-                        </h3>
-                        <a class="button2" href="#">Mua ngay</a>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <div class="carousel-item item3">
@@ -55,17 +46,7 @@
         </div>
         <div class="carousel-item item4">
             <div class="container">
-                <div class="w3l-space-banner">
-                    <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p>Nhận ngay
-                            <span>40%</span> Giảm giá các loại
-                        </p>
-                        <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">SUMMER
-                            <span>GIẢM GIÁ</span>
-                        </h3>
-                        <a class="button2" href="home.php">Mua ngay </a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
