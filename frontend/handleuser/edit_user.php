@@ -50,7 +50,7 @@ if (isset($_POST['doithongtin'])) {
                                     <div class="text-center">
                                         <h1 class="h4 mb-2">Thay đổi thông tin</h1>
                                     </div>
-                                    <p class="h6 text-dark mb-4 text-center">Vui lòng nhập đầy đủ thông tin cần thay đổi</p>
+                                    <p class="h6 text-dark mb-4 text-center"></p>
                                     
                                     <?php
                                     if ($errors != '') {

@@ -90,7 +90,7 @@ include('./common/head.php')
                                     <th>Vai trò</th>
                                     <th>Địa chỉ</th>
                                     <th>Số điện thoại</th>
-                                    <th>Quản lí</th>
+                                    <!-- <th>Quản lí</th> -->
 
                                 </tr>
                                 <?php
@@ -122,10 +122,10 @@ include('./common/head.php')
                                         <td>
                                             <?php echo $row_acount['user_phone'] ?></td>
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             <a href="#1" class="btn btn-warning">Sửa</a>
                                             <a href="#1" class="btn btn-danger">Xóa</a>
-                                        </td>
+                                        </td> -->
                                     </tr>
                                     <!-- Modal edit don hang-->
                                     <div class="modal fade" id="confirmOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
