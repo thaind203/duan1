@@ -85,7 +85,7 @@ include('./common/head.php')
                                 <tr class="text-center">
                                     <th>Thứ tự</th>
                                     <th>Email</th>
-                                    <th>Mật khẩu</th>
+                                    <!-- <th>Mật khẩu</th> -->
                                     <th>Họ tên</th>
                                     <th>Vai trò</th>
                                     <th>Địa chỉ</th>
@@ -103,7 +103,7 @@ include('./common/head.php')
                                     <tr class="text-center">
                                         <td><?php echo $orderNumber ?></td>
                                         <td><?php echo $row_acount['user_email'] ?></td>
-                                        <td><?php echo $row_acount['user_password'] ?></td>
+                                        <!-- <td><?php echo $row_acount['user_password'] ?></td> -->
                                         <td><?php echo $row_acount['user_name'] ?></td>
 
                                         <td>
